@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Feed from "./views/Feed";
-import Home from "./views/Home";
-import FourOFour from "./views/FourOFour";
+// import Home from "./views/Home";
+import News from "./views/News";
+// import FourOFour from "./views/FourOFour";
 import Post from "./views/Post";
 import bus from "./bus";
 
@@ -10,9 +11,9 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    name: "home",
+    name: "news",
     path: "/",
-    component: Home
+    component: News
   },
   {
     name: "posts",
@@ -23,21 +24,21 @@ const routes = [
     name: "post",
     path: "/posts/:slug",
     component: Post
-  },
-  {
-    name: "page",
-    path: "/page/:page",
-    component: Feed
-  },
-  {
-    name: "four-o-four",
-    path: "/404",
-    component: FourOFour
-  },
-  {
-    path: "*",
-    redirect: "/404"
   }
+  // {
+  //   name: "page",
+  //   path: "/page/:page",
+  //   component: Feed
+  // },
+  // {
+  //   name: "four-o-four",
+  //   path: "/404",
+  //   component: FourOFour
+  // },
+  // {
+  //   path: "*",
+  //   redirect: "/404"
+  // }
 ];
 
 const router = new VueRouter({
