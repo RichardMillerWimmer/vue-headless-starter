@@ -1,29 +1,33 @@
 <template>
   <li>
-    <router-link v-if="post.featured_image" :to="{ name: 'post', params: { slug: post.slug } }">
-      <img :src="post.featured_image" alt=""/>
+    <router-link
+      v-if="post.featured_image"
+      :to="{ name: 'post', params: { slug: post.slug } }"
+    >
+      <img :src="post.featured_image" alt="" />
     </router-link>
-    <span>{{ getFormattedDate(post.date) }}</span>
+    <!-- <span>{{ getFormattedDate(post.date) }}</span> -->
     <h3>
-      <router-link :to="{ name: 'post', params: { slug: post.slug } }" v-html="post.title.rendered"> </router-link>
+      <router-link
+        :to="{ name: 'post', params: { slug: post.slug } }"
+        v-html="post.title.rendered"
+      >
+      </router-link>
     </h3>
   </li>
 </template>
 
 <script>
 export default {
-  name: 'Card',
+  name: "Card",
 
   props: {
     post: {
-      type: Object
+      name: "Retail Trends - Fall 2019",
+      feature_image: "../assets/images/featured_image_0007_Layer_1.jpg"
     }
   }
-}
-
+};
 </script>
 
-<style scoped lang="scss">
-
-</style>
-
+<style scoped lang="scss"></style>

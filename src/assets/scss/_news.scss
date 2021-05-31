@@ -1,0 +1,15 @@
+@import "./variables";
+
+.newsFlex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  h1 {
+    font-size: $h1;
+    margin: 0 40px 0 25px;
+  }
+  .catfilter {
+    margin-bottom: 10px;
+  }
+}

@@ -3,8 +3,21 @@
 .filter {
   display: flex;
   flex-flow: row nowrap;
-  p {
-    margin: 0 0 0 5px;
+  button {
+    border: none;
+    background: transparent;
+    font-family: $font;
+    .box {
+      height: 15px;
+      width: 15px;
+      background: $dark-grey;
+      margin-bottom: 3px;
+    }
+    p {
+      margin: 0 0 0 5px;
+      color: $dark-grey;
+      font-size: $h5;
+    }
   }
   .filterFlex {
     display: flex;
@@ -12,9 +25,13 @@
     align-items: center;
     margin-left: 5px;
   }
-}
-.box {
-  height: 8px;
-  width: 8px;
-  background: $dark-grey;
+  .active,
+  button:hover {
+    .box {
+      background: $yellow;
+    }
+    p {
+      color: black;
+    }
+  }
 }
