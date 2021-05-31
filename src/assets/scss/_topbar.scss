@@ -4,6 +4,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
   margin: 0 30px;
 }
 .title {
@@ -28,8 +29,9 @@ h2 {
   display: flex;
   flex-flow: row nowrap;
   button {
-    border: none;
+    border: transparent;
     background: transparent;
+    height: 25px;
     font-size: $h5;
     font-weight: 800;
     margin-bottom: 0;
