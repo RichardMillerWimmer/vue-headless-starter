@@ -1,22 +1,24 @@
 <template>
-  <section class="newsFlex">
-    <h1>News</h1>
-    <CatFilter class="catfilter" />
+  <section>
+    <div class="newsFlex">
+      <h1>News</h1>
+      <CatFilter class="catfilter" />
+    </div>
     <div class="cardDisplay">
-      <Card />
+      <!-- <Feed /> -->
     </div>
   </section>
 </template>
 
 <script>
 import CatFilter from "../components/CatFilter";
-import Card from "../components/Card";
+import Feed from "../views/Feed";
 
 export default {
   name: "News",
   components: {
     CatFilter,
-    Card
+    Feed
   }
 };
 </script>

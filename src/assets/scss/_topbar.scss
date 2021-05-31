@@ -1,0 +1,41 @@
+@import "./variables";
+
+.navFlex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 0 30px;
+}
+.title {
+  display: flex;
+}
+h2 {
+  font-size: $h2;
+}
+.yellowBar {
+  position: absolute;
+  top: 42px;
+  background-color: $yellow;
+  height: 8px;
+  width: 35px;
+  z-index: -1;
+}
+// .up {
+//     position: absolute;
+//     top: 0;
+// }
+.navContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  button {
+    border: none;
+    background: transparent;
+    font-size: $h5;
+    font-weight: 800;
+    margin-bottom: 0;
+  }
+  .active,
+  button:hover {
+    border-bottom: 5px solid $yellow;
+  }
+}

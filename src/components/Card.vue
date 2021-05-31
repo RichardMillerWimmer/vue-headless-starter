@@ -6,7 +6,7 @@
     >
       <img :src="post.featured_image" alt="" />
     </router-link>
-    <!-- <span>{{ getFormattedDate(post.date) }}</span> -->
+    <span>{{ getFormattedDate(post.date) }}</span>
     <h3>
       <router-link
         :to="{ name: 'post', params: { slug: post.slug } }"
@@ -20,11 +20,9 @@
 <script>
 export default {
   name: "Card",
-
   props: {
     post: {
-      name: "Retail Trends - Fall 2019",
-      feature_image: "../assets/images/featured_image_0007_Layer_1.jpg"
+      type: Object
     }
   }
 };
