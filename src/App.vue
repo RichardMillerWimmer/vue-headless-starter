@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <Nav />
     <TopBar @showUpdater="showUpdater = true" />
     <div id="wrapper">
       <Updater v-if="showUpdater" :error="error" @close="showUpdater = false" />
