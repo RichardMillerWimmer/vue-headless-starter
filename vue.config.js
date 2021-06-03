@@ -2,10 +2,10 @@ const webpack = require("webpack");
 const path = require("path");
 
 const CONSTANTS = {
-  POSTS_PER_PAGE: JSON.stringify(process.env.POSTS_PER_PAGE),
-  REQUEST_CACHE_MAX: JSON.stringify(process.env.REQUEST_CACHE_MAX),
-  REST_ENDPOINT: JSON.stringify(process.env.REST_ENDPOINT),
-  GA_TRACKING_ID: JSON.stringify(process.env.GA_TRACKING_ID)
+  VUE_APP_POSTS_PER_PAGE: JSON.stringify(process.env.VUE_APP_POSTS_PER_PAGE),
+  VUE_APP_REQUEST_CACHE_MAX: JSON.stringify(process.env.REQUEST_CACHE_MAX),
+  VUE_APP_REST_ENDPOINT: JSON.stringify(process.env.VUE_APP_REST_ENDPOINT),
+  VUE_APP_GA_TRACKING_ID: JSON.stringify(process.env.VUE_APP_GA_TRACKING_ID)
 };
 
 module.exports = {

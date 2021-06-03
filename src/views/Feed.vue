@@ -21,12 +21,14 @@ export default {
     return {
       posts: [],
       page: 1,
-      totalPages: null
+      totalPages: null,
+      postPerPage: process.env.VUE_APP_POSTS_PER_PAGE
     };
   },
 
   mounted: function() {
     this.getPosts();
+    console.log(this.postPerPage);
   },
 
   created: function() {
@@ -41,7 +43,7 @@ export default {
 
       try {
         response = await this.get(
-          `/posts?per_page=${POSTS_PER_PAGE}&page=${this.page}`
+          `/posts?per_page=${VUE_APP_POSTS_PER_PAGE}&page=${this.page}`
         );
         this.totalPages = response.headers["x-wp-totalpages"];
       } catch (error) {
