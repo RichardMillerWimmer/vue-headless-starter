@@ -7,7 +7,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    endpoint: REST_ENDPOINT
+    endpoint: VUE_APP_REST_ENDPOINT
   },
 
   mutations: {

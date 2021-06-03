@@ -9,7 +9,7 @@ Vue.mixin(utils);
 
 //-- Initialize Google Analytics tracking.
 Vue.use(VueAnalytics, {
-  id: GA_TRACKING_ID,
+  id: VUE_APP_GA_TRACKING_ID,
   router
 });
 
