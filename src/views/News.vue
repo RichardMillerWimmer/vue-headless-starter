@@ -5,7 +5,7 @@
       <CatFilter class="catfilter" />
     </div>
     <div class="cardDisplay">
-      <!-- <Feed /> -->
+      <Feed />
     </div>
   </section>
 </template>
