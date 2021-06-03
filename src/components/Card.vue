@@ -14,8 +14,11 @@
           v-html="post.title.rendered"
         >
         </router-link>
+        <span> - </span>
       </h3>
-      <h3><span>-</span> {{ getFormattedDate(post.date) }}</h3>
+      <h3>{{ getFormattedDate(post.date) }}</h3>
+      <div class="excerpt" v-html="post.excerpt.rendered"></div>
+      <!-- {{post.excerpt.rendered}} -->
     </div>
   </li>
 </template>

@@ -106,7 +106,7 @@ export default {
             resolve(post);
           });
         });
-        // console.log(posts);
+        console.log(posts);
         Promise.all(requests).then(posts => resolve(posts));
       });
     }
