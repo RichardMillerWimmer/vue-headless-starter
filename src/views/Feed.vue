@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul>
+    <ul class="cardFlex">
       <Card v-for="post in posts" :post="post" :key="post.id" />
     </ul>
   </div>
@@ -106,7 +106,7 @@ export default {
             resolve(post);
           });
         });
-        console.log(posts);
+        // console.log(posts);
         Promise.all(requests).then(posts => resolve(posts));
       });
     }
@@ -118,4 +118,11 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.cardFlex {
+  margin: 30px 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+</style>

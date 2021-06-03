@@ -1,19 +1,22 @@
 <template>
-  <li>
+  <li class="cardContainer">
     <router-link
       v-if="post.featured_image"
       :to="{ name: 'post', params: { slug: post.slug } }"
     >
-      <img :src="post.featured_image" alt="" />
+      <img class="featuredImage" :src="post.featured_image" alt="" />
     </router-link>
-    <span>{{ getFormattedDate(post.date) }}</span>
-    <h3>
-      <router-link
-        :to="{ name: 'post', params: { slug: post.slug } }"
-        v-html="post.title.rendered"
-      >
-      </router-link>
-    </h3>
+    <div class="articleContainer">
+      <h3 class="articleTitle">
+        <router-link
+          class="articleLink"
+          :to="{ name: 'post', params: { slug: post.slug } }"
+          v-html="post.title.rendered"
+        >
+        </router-link>
+      </h3>
+      <h3><span>-</span> {{ getFormattedDate(post.date) }}</h3>
+    </div>
   </li>
 </template>
 
@@ -28,4 +31,6 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@import "../assets/scss/_card.scss";
+</style>
