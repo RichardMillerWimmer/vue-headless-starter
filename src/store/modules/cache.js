@@ -8,7 +8,7 @@ export default {
   mutations: {
     saveRequest(state, payload) {
       //-- If the request max has been hit, remove the first one.
-      if (Object.keys(state.requests).length >= REQUEST_CACHE_MAX) {
+      if (Object.keys(state.requests).length >= VUE_APP_REQUEST_CACHE_MAX) {
         delete state.requests[Object.keys(state.requests)[0]];
       }
 
